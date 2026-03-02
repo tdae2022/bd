@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Different Automation & Engineering - PLC, HMI & Industrial Automation Parts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone"></i> +8801680686424</span>
+                <span><i class="fas fa-envelope"></i> tda.engineering2022@gmail.com</span>
+            </div>
+            <div class="top-bar-right">
+                <span><i class="fas fa-map-marker-alt"></i> Pubail, Gazipur, Bangladesh</span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Think Different Automation & Engineering Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-main">Think Different</span>
+                        <span class="logo-sub">Automation & Engineering</span>
+                    </div>
+                </div>
+
+                <nav class="navbar" id="navbar">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#categories" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#categories"><i class="fas fa-server"></i> PLC Systems</a></li>
+                                <li><a href="#categories"><i class="fas fa-desktop"></i> HMI Panels</a></li>
+                                <li><a href="#categories"><i class="fas fa-bolt"></i> Frequency
+                                        Inverters</a></li>
+                                <li><a href="#categories"><i class="fas fa-wave-square"></i> Analog
+                                        Cards</a></li>
+                                <li><a href="#categories"><i class="fas fa-plug"></i> Input/Output Cards</a>
+                                </li>
+                                <li><a href="#categories"><i class="fas fa-puzzle-piece"></i> PLC
+                                        Modules</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="#about" class="nav-link">About Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="cart-empty">
+                <i class="fas fa-box-open"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display:none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">BDT 0</span>
+            </div>
+            <button class="btn-checkout" onclick="requestQuote()">
+                <i class="fas fa-file-invoice"></i> Request Quote
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-animation"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" style="display:none;">
+                    <i class="fas fa-certificate"></i> Authorized Dealer & Distributor
+                </div>
+                <h1 class="hero-title">
+                    Industrial Automation<br>
+                    <span class="gradient-text">Parts & Solutions</span>
+                </h1>
+                <p class="hero-desc">
+                    Bangladesh's trusted supplier of PLC, HMI, Frequency Inverters, Analog Cards,
+                    Input/Output Cards and all industrial automation components.
+                    Siemens, Mitsubishi, Allen Bradley, ABB, Schneider & more.
+                </p>
+                <div class="hero-btns">
+                    <a href="#categories" class="btn-primary">
+                        <i class="fas fa-th-large"></i> View All Products
+                    </a>
+                    <a href="contact.html" class="btn-secondary">
+                        <i class="fas fa-headset"></i> Get Quote
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">400+</span>
+                        <span class="stat-label">Products</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">80+</span>
+                        <span class="stat-label">Clients</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">200+</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-circle">
+                    <div class="circle-ring ring1"></div>
+                    <div class="circle-ring ring2"></div>
+                    <div class="circle-ring ring3"></div>
+                    <div class="hero-icon-center">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="floating-badge fb1"><i class="fas fa-server"></i> PLC</div>
+                    <div class="floating-badge fb2"><i class="fas fa-desktop"></i> HMI</div>
+                    <div class="floating-badge fb3"><i class="fas fa-bolt"></i> VFD</div>
+                    <div class="floating-badge fb4"><i class="fas fa-wave-square"></i> Analog</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Bar -->
+    <section class="brands-bar">
+        <div class="container">
+            <p class="brands-title">Authorized Dealer For</p>
+            <div class="brands-scroll">
+                <div class="brand-item">Siemens</div>
+                <div class="brand-item">Mitsubishi</div>
+                <div class="brand-item">Allen Bradley</div>
+                <div class="brand-item">ABB</div>
+                <div class="brand-item">Schneider</div>
+                <div class="brand-item">Omron</div>
+                <div class="brand-item">Delta</div>
+                <div class="brand-item">Fanuc</div>
+                <div class="brand-item">Yaskawa</div>
+                <div class="brand-item">Siemens</div>
+                <div class="brand-item">Mitsubishi</div>
+                <div class="brand-item">Allen Bradley</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Products</span>
+                <h2>Industrial Automation Components</h2>
+                <p>Complete range of PLC, HMI, VFD, and industrial control components from world's leading brands</p>
+            </div>
+            <div class="categories-grid">
+
+                <div class="cat-card" onclick="window.location='#categories'">
+                    <div class="cat-icon" style="background: linear-gradient(135deg, #1a73e8, #0d47a1)">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="cat-info">
+                        <h3>PLC Systems</h3>
+                        <p>Programmable Logic Controllers - Siemens S7, Mitsubishi MELSEC, Allen Bradley Logix</p>
+                        <div class="cat-brands">
+                            <span>Siemens</span><span>Mitsubishi</span><span>A.B</span>
+                        </div>
+                    </div>
+                    <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="cat-card" onclick="window.location='#categories'">
+                    <div class="cat-icon" style="background: linear-gradient(135deg, #00897b, #004d40)">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="cat-info">
+                        <h3>HMI Panels</h3>
+                        <p>Human Machine Interfaces - Touch Panels, Operator Panels, SCADA Displays</p>
+                        <div class="cat-brands">
+                            <span>Siemens</span><span>Proface</span><span>Weintek</span>
+                        </div>
+                    </div>
+                    <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="cat-card" onclick="window.location='#categories'">
+                    <div class="cat-icon" style="background: linear-gradient(135deg, #f57c00, #e65100)">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="cat-info">
+                        <h3>Frequency Inverters</h3>
+                        <p>Variable Frequency Drives (VFD) for motor speed control - 0.4kW to 500kW</p>
+                        <div class="cat-brands">
+                            <span>ABB</span><span>Siemens</span><span>Delta</span>
+                        </div>
+                    </div>
+                    <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="cat-card" onclick="window.location='#categories'">
+                    <div class="cat-icon" style="background: linear-gradient(135deg, #8e24aa, #4a148c)">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <div class="cat-info">
+                        <h3>Analog Cards</h3>
+                        <p>Analog Input/Output expansion modules - 4-20mA, 0-10V signal processing</p>
+                        <div class="cat-brands">
+                            <span>Siemens</span><span>Mitsubishi</span><span>Omron</span>
+                        </div>
+                    </div>
+                    <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="cat-card" onclick="window.location='#categories'">
+                    <div class="cat-icon" style="background: linear-gradient(135deg, #c62828, #b71c1c)">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="cat-info">
+                        <h3>Input/Output Cards</h3>
+                        <p>Digital I/O expansion modules, relay output cards, transistor output modules</p>
+                        <div class="cat-brands">
+                            <span>Siemens</span><span>Mitsubishi</span><span>Schneider</span>
+                        </div>
+                    </div>
+                    <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <div class="cat-card" onclick="window.location='#categories'">
+                    <div class="cat-icon" style="background: linear-gradient(135deg, #2e7d32, #1b5e20)">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div class="cat-info">
+                        <h3>PLC Modules</h3>
+                        <p>CPU modules, power supply modules, communication modules, special function modules</p>
+                        <div class="cat-brands">
+                            <span>Siemens</span><span>Mitsubishi</span><span>Omron</span>
+                        </div>
+                    </div>
+                    <div class="cat-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Hot Items</span>
+                <h2>Featured Products</h2>
+                <p>Best selling industrial automation components in stock and ready to ship</p>
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="plc">PLC</button>
+                <button class="filter-btn" data-filter="hmi">HMI</button>
+                <button class="filter-btn" data-filter="inverter">Inverters</button>
+                <button class="filter-btn" data-filter="module">Modules</button>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Products are loaded by JS -->
+            </div>
+            <div class="view-all-wrap">
+                <a href="#categories" class="btn-outline">
+                    <i class="fas fa-th-large"></i> View All Categories
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-badge">Why Think Different?</span>
+                <h2>Your Trusted Industrial Partner</h2>
+                <p>We provide genuine products with warranty and complete after-sales support</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>100% Genuine Products</h3>
+                    <p>All products are sourced from authorized distributors with manufacturer warranty</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h3>Fast Delivery</h3>
+                    <p>Same day dispatch for in-stock items. Pan Bangladesh delivery within 1-3 days</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Technical Support</h3>
+                    <p>Expert engineers available for programming, installation and troubleshooting</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing with special discounts for bulk orders and regular customers</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3>Easy Returns</h3>
+                    <p>Hassle-free return and replacement policy within 30 days of purchase</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Round the clock customer support via WhatsApp, phone and email</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-badge">About Us</span>
+                    <h2>Bangladesh's Leading Industrial Automation Supplier</h2>
+                    <p>Think Different Automation & Engineering has been serving Bangladesh's industrial sector with
+                        dedication. We specialize in providing high-quality automation components to factories,
+                        manufacturing plants, and industries across the country.</p>
+                    <p>Our team of experienced engineers and technical staff ensures that you get the right product for
+                        your application, along with complete installation and programming support.</p>
+                    <div class="about-highlights">
+                        <div class="highlight" style="display:none;">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ISO Certified Company</span>
+                        </div>
+                        <div class="highlight" style="display:none;">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Authorized Siemens & Mitsubishi Dealer</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free Technical Consultation</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>On-site Installation Available</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn-primary">
+                        <i class="fas fa-phone"></i> Contact Us Today
+                    </a>
+                </div>
+                <div class="about-stats-grid">
+                    <div class="about-stat-card">
+                        <div class="about-stat-icon"><i class="fas fa-industry"></i></div>
+                        <div class="about-stat-num" data-target="400">0</div>
+                        <div class="about-stat-label">Products in Stock</div>
+                    </div>
+                    <div class="about-stat-card">
+                        <div class="about-stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="about-stat-num" data-target="80">0</div>
+                        <div class="about-stat-label">Happy Clients</div>
+                    </div>
+                    <div class="about-stat-card">
+                        <div class="about-stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="about-stat-num" data-target="200">0</div>
+                        <div class="about-stat-label">Projects Done</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Reviews</span>
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"অসাধারণ সার্ভিস! Siemens S7-1200 PLC সব মডিউল সহ অনেক ভালো দামে পেয়েছি। ঢাকায় খুব দ্রুত
+                        ডেলিভারি দিয়েছে। Think Different Automation কে সবাইকে রিকমেন্ড করি!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MH</div>
+                        <div>
+                            <strong>Md. Habibur Rahman</strong>
+                            <span>Factory Manager, Dhaka</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"আমাদের গার্মেন্টস ফ্যাক্টরির জন্য ABB ফ্রিকোয়েন্সি ইনভার্টার জরুরি দরকার ছিল। Think Different
+                        Automation ২৪ ঘণ্টার মধ্যে টেকনিক্যাল সাপোর্টসহ ডেলিভারি দিয়েছে। অসাধারণ!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RI</div>
+                        <div>
+                            <strong>Rafiqul Islam</strong>
+                            <span>Electrical Engineer, Gazipur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Mitsubishi PLC মডিউলের সেরা দাম এখানেই পাওয়া যায়। তাদের টেকনিক্যাল টিম প্রোগ্রামিংয়েও সাহায্য
+                        করেছে। খুবই প্রফেশনাল কোম্পানি, আবারও কিনব।"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div>
+                            <strong>Shahadat Karim</strong>
+                            <span>Automation Engineer, Chittagong</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Need a Custom Quote?</h2>
+                    <p>Send us your BOM (Bill of Materials) and get competitive pricing within 2 hours</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn-white">
+                        <i class="fas fa-file-alt"></i> Send Inquiry
+                    </a>
+                    <a href="https://wa.me/8801680686424" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Think Different Automation & Engineering Logo" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-main">Think Different</span>
+                            <span class="logo-sub">Automation & Engineering</span>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for industrial automation components and solutions in Bangladesh.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Product Categories</h4>
+                    <ul>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> PLC Systems</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> HMI Panels</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Frequency
+                                Inverters</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> Analog Cards</a>
+                        </li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> I/O Cards</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right"></i> PLC Modules</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Top Brands</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Siemens</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Mitsubishi</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Allen Bradley</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> ABB</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Schneider Electric</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Omron</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Tongi Kaligang Road, Karamtola Ripon Vila Ground Floor, Pubail, Gazipur-1230</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+8801680686424</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>tda.engineering2022@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+8801680686424</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Think Different Automation & Engineering. All Rights Reserved.</p>
+                <p>Designed for Industrial Excellence | Gazipur, Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Quote Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-file-invoice"></i> Request a Quote</h3>
+                <button onclick="closeModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Your cart items will be sent as a quote request:</p>
+                <div id="modal-cart-list"></div>
+                <form id="quote-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone / WhatsApp *</label>
+                            <input type="tel" placeholder="+880-XXXXXXXXXXX" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" placeholder="Company name">
+                    </div>
+                    <div class="form-group">
+                        <label>Additional Notes</label>
+                        <textarea placeholder="Delivery location, urgency, special requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%">
+                        <i class="fas fa-paper-plane"></i> Submit Quote Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

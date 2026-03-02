@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Think Different Automation & Engineering</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone"></i> +8801680686424</span>
+                <span><i class="fas fa-envelope"></i> tda.engineering2022@gmail.com</span>
+            </div>
+            <div class="top-bar-right">
+                <span><i class="fas fa-map-marker-alt"></i> Pubail, Gazipur, Bangladesh</span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo" onclick="window.location='index.html'" style="cursor:pointer">
+                    <img src="images/logo.png" alt="Think Different Automation & Engineering Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-main">Think Different</span>
+                        <span class="logo-sub">Automation & Engineering</span>
+                    </div>
+                </div>
+                <nav class="navbar" id="navbar">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="dropdown">
+                            <a href="index.html#categories" class="nav-link">Products <i
+                                    class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html#categories"><i class="fas fa-server"></i> PLC Systems</a></li>
+                                <li><a href="index.html#categories"><i class="fas fa-desktop"></i> HMI Panels</a></li>
+                                <li><a href="index.html#categories"><i class="fas fa-bolt"></i> Frequency
+                                        Inverters</a></li>
+                                <li><a href="index.html#categories"><i class="fas fa-wave-square"></i> Analog
+                                        Cards</a></li>
+                                <li><a href="index.html#categories"><i class="fas fa-plug"></i> Input/Output Cards</a>
+                                </li>
+                                <li><a href="index.html#categories"><i class="fas fa-puzzle-piece"></i> PLC
+                                        Modules</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                        <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="cart-empty">
+                <i class="fas fa-box-open"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display:none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">BDT 0</span>
+            </div>
+            <button class="btn-checkout" onclick="requestQuote()">
+                <i class="fas fa-file-invoice"></i> Request Quote
+            </button>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Contact Us</span>
+            </div>
+            <h1>Get In Touch</h1>
+            <p>Send us your inquiry or request a quote — we respond within 2 hours during business hours</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info-strip">
+        <div class="container">
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #1a73e8, #0d47a1)">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-details">
+                        <span>Call / WhatsApp</span>
+                        <strong>+8801680686424</strong>
+                        <small>Always available</small>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #00897b, #004d40)">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-details">
+                        <span>Email Us</span>
+                        <strong>tda.engineering2022@gmail.com</strong>
+                        <small>Reply within 2 hours</small>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #f57c00, #e65100)">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-details">
+                        <span>Our Location</span>
+                        <strong>Tongi Kaligang Road, Karamtola</strong>
+                        <small>Pubail, Gazipur-1230, Bangladesh</small>
+                    </div>
+                </div>
+                <div class="info-card clickable" onclick="window.open('https://wa.me/8801680686424', '_blank')">
+                    <div class="info-icon" style="background: linear-gradient(135deg, #25d366, #128c7e)">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="info-details">
+                        <span>WhatsApp</span>
+                        <strong>Chat Instantly</strong>
+                        <small>Quick response guaranteed</small>
+                    </div>
+                    <div class="info-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form + Details -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrap">
+                    <div class="form-header">
+                        <span class="section-badge">Send Message</span>
+                        <h2>Request Quote or Inquiry</h2>
+                        <p>Fill out the form below and our team will get back to you with the best pricing and
+                            availability</p>
+                    </div>
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> Full Name *</label>
+                                <input type="text" name="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-building"></i> Company Name</label>
+                                <input type="text" name="company" placeholder="Factory / Company name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-phone"></i> Phone / WhatsApp *</label>
+                                <input type="tel" name="phone" placeholder="+880-XXXXXXXXXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" name="email" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-tag"></i> Inquiry Type</label>
+                            <select name="type">
+                                <option value="">Select inquiry type...</option>
+                                <option value="quote">Request Quote / Price</option>
+                                <option value="availability">Check Availability</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="bulk">Bulk Order Discount</option>
+                                <option value="repair">Repair / Service</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-box"></i> Products Required</label>
+                            <input type="text" name="products"
+                                placeholder="e.g., Siemens S7-1200, ABB ACS310 1.5kW, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> City / Location</label>
+                            <input type="text" name="city" placeholder="Your city for delivery estimate">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-comment"></i> Message / Requirements</label>
+                            <textarea name="message" rows="5"
+                                placeholder="Please describe your requirements, quantities, urgency, or any technical questions..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="urgent">
+                                <span><i class="fas fa-bolt" style="color:#f59e0b"></i> This is an urgent requirement
+                                    (within 24 hours)</span>
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i> Send Inquiry
+                            </button>
+                            <a href="https://wa.me/8801680686424?text=Hello, I need information about your products."
+                                class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp Instead
+                            </a>
+                        </div>
+                        <div class="form-success" id="form-success" style="display:none">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Inquiry Submitted Successfully!</strong>
+                                <p>Our team will contact you within 2 hours. Thank you!</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sidebar Info -->
+                <div class="contact-sidebar">
+
+                    <!-- Why Customers Love Us -->
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-header">
+                            <i class="fas fa-star"></i>
+                            <h3>Why Choose Us</h3>
+                        </div>
+                        <div class="trust-list">
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>100% Genuine Products with Warranty</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Same Day Dispatch Available</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Pan Bangladesh Delivery</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Free Technical Consultation</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Bulk Order Special Discounts</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>On-site Installation Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-header">
+                            <i class="fas fa-credit-card"></i>
+                            <h3>Payment Methods</h3>
+                        </div>
+                        <div class="payment-methods">
+                            <div class="payment-item"><i class="fas fa-university"></i> Bank Transfer</div>
+                            <div class="payment-item"><i class="fas fa-money-bill"></i> Cash on Delivery</div>
+                            <div class="payment-item"><i class="fas fa-mobile-alt"></i> Mobile Banking</div>
+                            <div class="payment-item"><i class="fas fa-credit-card"></i> Online Banking</div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Contact -->
+                    <div class="sidebar-card cta-card">
+                        <i class="fab fa-whatsapp" style="font-size:2.5rem;color:#25d366;margin-bottom:10px"></i>
+                        <h3>Quick Order via WhatsApp</h3>
+                        <p>Send your requirements directly on WhatsApp for instant pricing</p>
+                        <a href="https://wa.me/8801680686424?text=Hello! I need industrial automation parts."
+                            target="_blank" class="btn-whatsapp-large">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-header">
+                <h2><i class="fas fa-map-marked-alt"></i> Find Our Office</h2>
+                <p>Pubail, Gazipur — Visit us for live product demo and consultation</p>
+            </div>
+            <div class="map-placeholder">
+                <div class="map-pin-animation">
+                    <div class="map-pin"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="map-pulse"></div>
+                </div>
+                <div class="map-info">
+                    <h3>Think Different Automation & Engineering</h3>
+                    <p>Tongi Kaligang Road, Karamtola<br>
+                        Ripon Vila Ground Floor, Pubail, Gazipur-1230</p>
+                    <a href="https://maps.google.com/?q=Tongi+Kaligang+Road,+Karamtola,+Pubail,+Gazipur,+Bangladesh"
+                        target="_blank" class="btn-directions">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Think Different Automation & Engineering Logo" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-main">Think Different</span>
+                            <span class="logo-sub">Automation & Engineering</span>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for industrial automation components and solutions in Bangladesh.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product Categories</h4>
+                    <ul>
+                        <li><a href="index.html#categories"><i class="fas fa-chevron-right"></i> PLC Systems</a></li>
+                        <li><a href="index.html#categories"><i class="fas fa-chevron-right"></i> HMI Panels</a></li>
+                        <li><a href="index.html#categories"><i class="fas fa-chevron-right"></i> Frequency
+                                Inverters</a></li>
+                        <li><a href="index.html#categories"><i class="fas fa-chevron-right"></i> Analog Cards</a>
+                        </li>
+                        <li><a href="index.html#categories"><i class="fas fa-chevron-right"></i> I/O Cards</a></li>
+                        <li><a href="index.html#categories"><i class="fas fa-chevron-right"></i> PLC Modules</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="index.html#categories"><i class="fas fa-chevron-right"></i> All Products</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item"><i class="fas fa-phone"></i><span>+8801680686424</span></div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i><span>tda.engineering2022@gmail.com</span>
+                    </div>
+                    <div class="contact-item"><i class="fab fa-whatsapp"></i><span>+8801680686424</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Think Different Automation & Engineering. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-file-invoice"></i> Request a Quote</h3>
+                <button onclick="closeModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Your cart items will be sent as a quote request:</p>
+                <div id="modal-cart-list"></div>
+                <form id="quote-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone / WhatsApp *</label>
+                            <input type="tel" placeholder="+880-XXXXXXXXXXX" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" placeholder="Company or Factory name">
+                    </div>
+                    <div class="form-group">
+                        <label>Additional Notes</label>
+                        <textarea placeholder="Delivery location, urgency, special requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%">
+                        <i class="fas fa-paper-plane"></i> Submit Quote Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products-data.js"></script>
+    <script>
+        // Mobile menu
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            const toggle = document.getElementById('menu-toggle');
+            navbar.classList.toggle('open');
+            toggle.innerHTML = navbar.classList.contains('open')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        }
+        // Header scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+        // Form submit
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const btn = this.querySelector('.btn-submit');
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Arranging Email...';
+            btn.disabled = true;
+
+            // Gather form data
+            const name = this.querySelector('[name="name"]').value;
+            const company = this.querySelector('[name="company"]').value;
+            const phone = this.querySelector('[name="phone"]').value;
+            const email = this.querySelector('[name="email"]').value;
+            const type = this.querySelector('[name="type"]').value;
+            const products = this.querySelector('[name="products"]').value;
+            const city = this.querySelector('[name="city"]').value;
+            const message = this.querySelector('[name="message"]').value;
+            const urgent = this.querySelector('[name="urgent"]').checked ? 'Yes' : 'No';
+
+            const subject = encodeURIComponent(`New Inquiry (${type || 'General'}) from ${name}`);
+            const bodyText = `Hello Think Different Automation,
+
+I have submitted an inquiry via your website contact form:
+
+Customer Details:
+Name: ${name}
+Company Form: ${company || 'N/A'}
+Phone/WhatsApp: ${phone}
+Email: ${email || 'N/A'}
+City/Location: ${city || 'N/A'}
+
+Inquiry Type: ${type || 'General'}
+Products Required: ${products || 'N/A'}
+Urgent Requirement: ${urgent}
+
+Message:
+${message || 'N/A'}
+
+Thank you.`;
+            const body = encodeURIComponent(bodyText);
+
+            // Open mail client
+            window.location.href = `mailto:tda.engineering2022@gmail.com?subject=${subject}&body=${body}`;
+
+            setTimeout(() => {
+                this.reset();
+                document.getElementById('form-success').style.display = 'flex';
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry';
+                btn.disabled = false;
+                setTimeout(() => {
+                    document.getElementById('form-success').style.display = 'none';
+                }, 5000);
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

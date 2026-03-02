@@ -217,48 +217,82 @@ const productsData = [
 
     // Modules
     {
-        id: 22, category: 'module', brand: 'Siemens',
+        id: 22, category: 'plc', brand: 'Siemens',
         name: 'Siemens S7-1200 SM 1221 8DI',
         desc: '8 Digital Inputs Expansion Module for S7-1200, 24VDC',
-
         icon: '🔧', badge: null,
         tags: ['SM1221', '8DI', '6ES7221'],
         inStock: true
     },
     {
-        id: 23, category: 'module', brand: 'Siemens',
+        id: 23, category: 'plc', brand: 'Siemens',
         name: 'Siemens CM 1241 RS485 Module',
         desc: 'RS485 Communication Module for S7-1200, Modbus RTU',
-
         icon: '🔧', badge: 'popular',
         tags: ['CM1241', 'RS485', 'Modbus'],
         inStock: true
     },
     {
-        id: 24, category: 'module', brand: 'Mitsubishi',
+        id: 24, category: 'plc', brand: 'Mitsubishi',
         name: 'Mitsubishi FX3U-4AD Analog Input',
         desc: '4-Channel Analog Input Module for FX3U series, ±10V/4-20mA',
-
         icon: '🔧', badge: null,
         tags: ['FX3U-4AD', '4AI', 'FX3U'],
         inStock: true
     },
     {
-        id: 25, category: 'module', brand: 'Siemens',
+        id: 25, category: 'plc', brand: 'Siemens',
         name: 'Siemens PS 307 5A Power Supply',
         desc: 'Power Supply Module for S7-300, 24VDC/5A output',
-
         icon: '🔧', badge: 'sale',
         tags: ['PS307', '5A', '6ES7307'],
         inStock: true
     },
     {
-        id: 26, category: 'module', brand: 'Omron',
+        id: 26, category: 'plc', brand: 'Omron',
         name: 'Omron CJ1W-SCU41-V1 Serial Module',
         desc: '2-Port Serial Communications Unit, RS232C + RS422/485',
-
         icon: '🔧', badge: null,
         tags: ['CJ1W-SCU41', 'Serial', 'RS232/485'],
+        inStock: true
+    },
+    {
+        id: 27, category: 'servo', brand: 'Mitsubishi',
+        name: 'Mitsubishi MR-J4-10A Servo Drive',
+        desc: 'High-performance AC Servo Amplifier, 100W, 1-Phase 200VAC',
+        icon: '⚙️',
+        image: 'images/products/mitsubishi-servo.png',
+        badge: 'new',
+        tags: ['MR-J4', 'Servo Drive', 'Mitsubishi'],
+        inStock: true
+    },
+    {
+        id: 28, category: 'temp', brand: 'Autonics',
+        name: 'Autonics TCN4S Temperature Controller',
+        desc: 'Dual display PID temperature controller, 100-240VAC',
+        icon: '🌡️',
+        image: 'images/products/autonics-temp.png',
+        badge: 'popular',
+        tags: ['TCN4', 'Temp Controller', 'PID'],
+        inStock: true
+    },
+    {
+        id: 29, category: 'power', brand: 'Mean Well',
+        name: 'Mean Well LRS-350-24 Power Supply',
+        desc: '350W 24V 14.6A Single Output Switching Power Supply',
+        icon: '🔋',
+        image: 'images/products/meanwell-psu.png',
+        badge: 'sale',
+        tags: ['LRS-350', '24VDC', 'Power Supply'],
+        inStock: true
+    },
+    {
+        id: 30, category: 'sensor', brand: 'SICK',
+        name: 'SICK Inductive Proximity Sensor',
+        desc: 'M12, Sn=4mm, Flush, NPN NO, M12 4-pin connector',
+        icon: '📡',
+        badge: 'new',
+        tags: ['SICK', 'Sensor', 'Proximity'],
         inStock: true
     }
 ];

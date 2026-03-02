@@ -294,6 +294,16 @@ const productsData = [
         badge: 'new',
         tags: ['SICK', 'Sensor', 'Proximity'],
         inStock: true
+    },
+    {
+        id: 31, category: 'encoder', brand: 'Omron',
+        name: 'Omron E6B2-CWZ6C Rotary Encoder',
+        desc: 'Incremental Rotary Encoder, 1000 P/R, 5-24VDC, Open Collector',
+        icon: '🔄',
+        image: 'images/products/omron-encoder.png',
+        badge: 'new',
+        tags: ['E6B2', 'Encoder', 'Rotary'],
+        inStock: true
     }
 ];
 

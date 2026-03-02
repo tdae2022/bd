@@ -172,10 +172,14 @@ function renderProductCard(product) {
                 <i class="fas fa-bell"></i> Out of Stock
            </button>`;
 
+    const imgContent = product.image
+        ? `<img src="${product.image}" alt="${product.name}" style="width:100%;height:100%;object-fit:contain;padding:10px;">`
+        : `<span style="font-size:4rem">${product.icon}</span>`;
+
     return `
     <div class="product-card" data-category="${product.category}">
         <div class="product-img">
-            <span style="font-size:4rem">${product.icon}</span>
+            ${imgContent}
             ${badge}
         </div>
         <div class="product-body">
@@ -255,7 +259,7 @@ function requestQuote() {
     let listHTML = '';
     cart.forEach(item => {
         const p = productsData.find(pr => pr.id === item.id);
-        if (p) listHTML += `<div>• ${p.name} × ${item.qty}</div>`;
+        if (p) listHTML += `< div >• ${p.name} × ${item.qty}</div > `;
     });
     listEl.innerHTML = listHTML;
     modal.classList.add('active');
@@ -286,24 +290,24 @@ document.getElementById('quote-form')?.addEventListener('submit', (e) => {
     cart.forEach(item => {
         const p = productsData.find(pr => pr.id === item.id);
         if (p) {
-            cartText += `- ${p.name} (Qty: ${item.qty})\n`;
+            cartText += `- ${p.name} (Qty: ${item.qty}) \n`;
         }
     });
 
     // Construct Email Body
-    const subject = encodeURIComponent(`New Quote Request from ${name}`);
+    const subject = encodeURIComponent(`New Quote Request from ${name} `);
     const body = encodeURIComponent(`
 Hello Think Different Automation,
 
-I would like to request a quote for the following items:
+        I would like to request a quote for the following items:
 
 ${cartText}
 
 Customer Details:
-Name: ${name}
-Phone/WhatsApp: ${phone}
-Email: ${email || 'N/A'}
-Company: ${company || 'N/A'}
+    Name: ${name}
+    Phone / WhatsApp: ${phone}
+    Email: ${email || 'N/A'}
+    Company: ${company || 'N/A'}
 
 Additional Notes:
 ${notes || 'N/A'}
@@ -312,7 +316,7 @@ Thank you.
     `.trim());
 
     // Open mail client
-    window.location.href = `mailto:tda.engineering2022@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto: tda.engineering2022@gmail.com?subject = ${subject}& body=${body} `;
 
     // Show Success UI
     btn.innerHTML = '<i class="fas fa-check-circle"></i> Quote Prepared!';

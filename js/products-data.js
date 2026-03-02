@@ -18,8 +18,9 @@ const productsData = [
         id: 1, category: 'plc', brand: 'Siemens',
         name: 'Siemens S7-1200 CPU 1214C DC/DC/DC',
         desc: '14DI/10DO/2AI, 24VDC power supply, Ethernet port',
-
-        icon: '🖥️', badge: 'popular',
+        icon: '🖥️',
+        image: 'images/products/siemens-s7-1200.png',
+        badge: 'popular',
         tags: ['S7-1200', '6ES7214', '24VDC'],
         inStock: true
     },
@@ -65,8 +66,9 @@ const productsData = [
         id: 6, category: 'hmi', brand: 'Siemens',
         name: 'Siemens KTP700 Basic PN',
         desc: '7" TFT Touch Panel, 800x480 resolution, PROFINET',
-
-        icon: '📺', badge: 'popular',
+        icon: '📺',
+        image: 'images/products/siemens-ktp700.png',
+        badge: 'popular',
         tags: ['KTP700', 'Touch Panel', '7 inch'],
         inStock: true
     },
@@ -103,8 +105,9 @@ const productsData = [
         id: 10, category: 'inverter', brand: 'ABB',
         name: 'ABB ACS310 1.5kW 3-Phase VFD',
         desc: 'Variable Frequency Drive, 380-480VAC, IP20, built-in EMC',
-
-        icon: '⚡', badge: 'popular',
+        icon: '⚡',
+        image: 'images/products/abb-acs310.png',
+        badge: 'popular',
         tags: ['ACS310', '1.5kW', '3-Phase'],
         inStock: true
     },
